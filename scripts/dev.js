@@ -1,17 +1,22 @@
 const { spawn } = require('child_process');
 
-const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const isWindows = process.platform === 'win32';
 
 const services = [
-  { name: 'backend', args: ['--prefix', 'backend', 'run', 'dev'] },
-  { name: 'frontend', args: ['--prefix', 'frontend', 'run', 'dev'] }
+  { name: 'backend', command: 'npm --prefix backend run dev' },
+  { name: 'frontend', command: 'npm --prefix frontend run dev' }
 ];
 
 const children = services.map((service) => {
-  const child = spawn(npmCommand, service.args, {
+  const child = spawn(service.command, {
     cwd: process.cwd(),
     env: process.env,
-    stdio: 'inherit'
+    stdio: 'inherit',
+    shell: isWindows ? 'cmd.exe' : true
+  });
+
+  child.on('error', (error) => {
+    console.error(`${service.name} failed to start: ${error.message}`);
   });
 
   child.on('exit', (code) => {

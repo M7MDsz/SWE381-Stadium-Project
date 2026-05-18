@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import StadiumCard from '../components/StadiumCard.jsx';
 import { apiRequest } from '../services/api';
 

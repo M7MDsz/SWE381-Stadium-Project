@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SlotBadge from '../components/SlotBadge.jsx';
 import { AuthContext } from '../context/AuthContext.jsx';

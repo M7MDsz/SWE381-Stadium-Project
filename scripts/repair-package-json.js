@@ -16,7 +16,8 @@ const files = {
       verify: 'node scripts/verify-project.js',
       'check:backend': 'node --check backend/server.js && node --check backend/app.js && for f in backend/controllers/*.js backend/routes/*.js backend/models/*.js backend/middleware/*.js backend/config/*.js; do node --check "$f" || exit 1; done',
       'dev:backend': 'npm --prefix backend run dev',
-      'dev:frontend': 'npm --prefix frontend run dev'
+      'dev:frontend': 'npm --prefix frontend run dev',
+      'repair:frontend': 'node scripts/repair-frontend-react-imports.js'
     }
   },
   'backend/package.json': {
