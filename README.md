@@ -95,32 +95,7 @@ npm install
 npm run dev
 ```
 
-This command starts both apps at the same time. Backend API runs on `http://localhost:5000` and frontend runs on the Vite URL shown in the terminal, usually `http://localhost:5173`.
 
-If only the backend starts on your computer, use two terminals instead:
-
-Terminal 1:
-
-```bash
-npm run dev:backend
-```
-
-Terminal 2:
-
-```bash
-npm run dev:frontend
-```
-
-## If the Frontend Is a White Page
-
-Do not open `frontend/index.html` directly. Start the app with Vite from the project root:
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the frontend URL printed in the terminal, usually `http://localhost:5173`. If the page is still blank, see `frontend/TROUBLESHOOTING.md`.
 
 ## API Summary
 
