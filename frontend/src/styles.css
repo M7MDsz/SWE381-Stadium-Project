@@ -1,0 +1,43 @@
+body {
+  background-color: #f5f7f5;
+}
+
+.hero {
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+}
+
+.stadium-photo {
+  height: 180px;
+  object-fit: cover;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.small-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.slot-box {
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  min-height: 110px;
+}
+
+.available {
+  background-color: #198754;
+}
+
+.reserved {
+  background-color: #dc3545;
+}
+
+.stat-card h3 {
+  color: #198754;
+  font-weight: bold;
+}
