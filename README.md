@@ -95,7 +95,7 @@ npm install
 npm run dev
 ```
 
-Backend API runs on `http://localhost:5000` and frontend runs on the Vite URL shown in the terminal.
+
 
 ## API Summary
 
