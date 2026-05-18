@@ -1,4 +1,3 @@
-import React from 'react';
 function SlotBadge({ slot, onReserve }) {
   return (
     <div className={`slot-box ${slot.isReserved ? 'reserved' : 'available'}`}>
