@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import SlotBadge from '../components/SlotBadge.jsx';
 import { AuthContext } from '../context/AuthContext.jsx';
 import { apiRequest } from '../services/api';

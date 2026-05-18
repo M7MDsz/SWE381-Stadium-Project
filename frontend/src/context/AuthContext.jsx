@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { apiRequest } from '../services/api';
 
 export const AuthContext = createContext();
@@ -9,14 +9,6 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const savedUser = localStorage.getItem('stadiumUser');
-
-    if (savedUser) {
-      try {
-        setUser(JSON.parse(savedUser));
-      } catch (error) {
-        localStorage.removeItem('stadiumUser');
-      }
-    }
 
     setLoading(false);
   }, []);

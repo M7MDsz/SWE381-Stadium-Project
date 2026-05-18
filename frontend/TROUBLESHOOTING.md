@@ -78,29 +78,3 @@ location.reload()
 ```
 
 The app also removes invalid saved login data automatically when it starts.
-
-## 6. Fix `Failed to load PostCSS config` or `EJSONPARSE`
-
-If Vite shows an error like this on Windows:
-
-```text
-Failed to load PostCSS config
-Expected double-quoted property name in JSON
-```
-
-then one of your `package.json` files has broken JSON. This usually happens after manually editing `package.json` or resolving GitHub conflicts.
-
-From the project root, run this command with Node, not npm:
-
-```powershell
-node scripts\repair-package-json.js
-```
-
-Then reinstall and start again:
-
-```powershell
-npm install
-npm run dev
-```
-
-If you only want to check the frontend file, open `frontend\package.json` and make sure there is no comma after the last item in `scripts`, `dependencies`, or `devDependencies`.
